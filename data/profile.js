@@ -186,7 +186,7 @@ I believe the best technology is invisible: it just works, reliably, at scale, w
   location: "India",
   email: "hs4096883@gmail.com",
   github: "https://github.com/Harishtech142",
-  instagram: "https://instagram.com/your-handle",
+  instagram: "https://www.instagram.com/trexflow.ai/?utm_source=ig_web_button_share_sheet",
   whatsapp: "https://wa.me/916230931639",
   resumeUrl: "/resume.pdf",
 };
