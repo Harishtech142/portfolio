@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: replace placeholder.TrexFlow.dev with your real domain once you have one
+Sitemap: https://placeholder.TrexFlow.dev/sitemap.xml
