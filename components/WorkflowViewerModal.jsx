@@ -22,14 +22,15 @@ export default function WorkflowViewerModal({ onClose, workflowId, title, subtit
         style={{ background:'rgba(8,8,18,0.98)', height:'min(580px,88vh)' }}>
 
         {/* Header */}
-        <div className="flex items-center justify-between px-5 py-4 border-b border-white/8 shrink-0"
-          style={{ background:'rgba(255,255,255,0.025)' }}>
+        <div className="flex items-center justify-between px-5 py-4 border-b shrink-0"
+          style={{ background:'rgba(255,255,255,0.025)', borderColor:'rgba(255,255,255,0.08)' }}>
           <div>
             <h3 className="text-base font-bold text-white">{title}</h3>
             <p className="text-[10px] text-white/40 mt-0.5">{subtitle}</p>
           </div>
           <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] font-mono border border-green-500/30 bg-green-500/8 text-green-400">
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] font-mono border border-green-500/30 text-green-400"
+              style={{ background:'rgba(34,197,94,0.08)' }}>
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
               Live Workflow
             </div>
@@ -48,7 +49,7 @@ export default function WorkflowViewerModal({ onClose, workflowId, title, subtit
         {/* Footer — opens the dedicated full Workflow Viewer page (zoom, fullscreen,
             download, step-by-step explanation). Never links to GitHub, source code,
             or anything beyond the workflow diagram itself. */}
-        <div className="px-5 py-4 border-t border-white/8 shrink-0"
+        <div className="px-5 py-4 border-t border-white/10 shrink-0"
           style={{ background:'rgba(255,255,255,0.02)' }}>
           <Link href={`/workflow/${workflowId}`} onClick={onClose}
             className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-sm font-semibold text-white transition-all hover:opacity-90 hover:scale-[1.01]"

@@ -6,8 +6,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { experiences } from '../data/profile';
 import Reveal, { Stagger } from './ScrollReveal';
 
-gsap.registerPlugin(ScrollTrigger);
-
 const typeConfig = {
   'Full-time': { color: 'text-green-400', bg: 'bg-green-400/10 border-green-400/20' },
   Contract: { color: 'text-blue-400', bg: 'bg-blue-400/10 border-blue-400/20' },
@@ -19,6 +17,8 @@ export default function Experience() {
   const timelineRef = useRef(null);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    gsap.registerPlugin(ScrollTrigger);
     const section = sectionRef.current;
     const timeline = timelineRef.current;
     if (!section || !timeline) return;

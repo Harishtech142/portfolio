@@ -9,8 +9,6 @@ import { demoConfigs, workflowConfigs } from '../data/demoConfigs';
 import { ProjectCard, ProjectModal } from './ProjectCard';
 import Reveal, { Stagger } from './ScrollReveal';
 
-gsap.registerPlugin(ScrollTrigger);
-
 const AIChatModal = lazy(() => import('./AIChatModal'));
 const WorkflowViewerModal = lazy(() => import('./WorkflowViewerModal'));
 
@@ -34,6 +32,8 @@ export default function Projects() {
   }, [activeCategory, query]);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    gsap.registerPlugin(ScrollTrigger);
     const grid = gridRef.current;
     if (!grid) return;
     const cards = grid.children;

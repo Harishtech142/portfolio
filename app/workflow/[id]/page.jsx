@@ -40,7 +40,7 @@ export default function WorkflowPage() {
 
   return (
     <div ref={pageRef} className="min-h-screen bg-[#0a0a0a] text-white">
-      <div className="sticky top-0 z-20 border-b border-white/8 backdrop-blur-xl bg-black/60">
+      <div className="sticky top-0 z-20 border-b border-white/10 backdrop-blur-xl bg-black/60">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between gap-3">
           <Link href="/#projects"
             className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors shrink-0">
@@ -96,7 +96,7 @@ export default function WorkflowPage() {
                 <div className="space-y-3 overflow-y-auto pr-1">
                   {steps.map((step) => (
                     <motion.div key={step.n} variants={fadeUp}
-                      className="flex gap-3 p-3 rounded-xl border border-white/8 bg-white/[0.02]">
+                      className="flex gap-3 p-3 rounded-xl border border-white/10 bg-white/[0.02]">
                       <div className="w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-bold shrink-0"
                         style={{ background: `${step.color}22`, color: step.color, border: `1px solid ${step.color}55` }}>
                         {step.n}

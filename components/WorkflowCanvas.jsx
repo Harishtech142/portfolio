@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ZoomIn, ZoomOut, Maximize2, Move } from 'lucide-react';
 
@@ -143,7 +143,7 @@ export default function WorkflowCanvas({ nodes, connections, hint = 'Drag to pan
   };
 
   return (
-    <div className="relative flex-1 overflow-hidden rounded-xl border border-white/8 h-full"
+    <div className="relative flex-1 overflow-hidden rounded-xl border border-white/10 h-full"
       style={{ background:'#0d0d1a', cursor: dragging ? 'grabbing' : 'grab',
         backgroundImage:'radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px)',
         backgroundSize:'24px 24px' }}
@@ -160,7 +160,7 @@ export default function WorkflowCanvas({ nodes, connections, hint = 'Drag to pan
           { icon: Maximize2, fn: () => { setZoom(1); setPan({x:0,y:0}); }, label: 'Reset view' },
         ].map(({ icon:Ic, fn, label }, i) => (
           <button key={i} onClick={fn} aria-label={label}
-            className="w-7 h-7 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all border border-white/8">
+            className="w-7 h-7 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all border border-white/10">
             <Ic size={12} />
           </button>
         ))}

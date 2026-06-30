@@ -7,8 +7,6 @@ import { Zap, Bot, Globe, Code2, Database, Wrench } from 'lucide-react';
 import { skillGroups } from '../data/profile';
 import Reveal, { Stagger } from './ScrollReveal';
 
-gsap.registerPlugin(ScrollTrigger);
-
 const iconMap = { Zap, Bot, Globe, Code2, Database, Wrench };
 
 const cardStyle = (color) => {
@@ -30,6 +28,8 @@ export default function Skills() {
   const gridRef = useRef(null);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    gsap.registerPlugin(ScrollTrigger);
     const grid = gridRef.current;
     if (!grid) return;
     const cards = grid.children;

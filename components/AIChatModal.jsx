@@ -118,7 +118,7 @@ export default function AIChatModal({
         style={{ background:'rgba(8,8,18,0.98)', height:'min(640px,90vh)' }}>
 
         {/* Header */}
-        <div className="flex items-center justify-between px-5 py-4 border-b border-white/8 shrink-0"
+        <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 shrink-0"
           style={{ background:'rgba(255,255,255,0.025)' }}>
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-full flex items-center justify-center shrink-0"
@@ -166,7 +166,7 @@ export default function AIChatModal({
               )}
               <div className={`max-w-[78%] ${msg.role === 'user' ? 'items-end' : 'items-start'} flex flex-col`}>
                 <div className={`rounded-2xl px-4 py-2.5 text-sm leading-relaxed whitespace-pre-wrap ${
-                  msg.role === 'user' ? 'text-white rounded-tr-sm' : 'text-white/85 rounded-tl-sm border border-white/8'
+                  msg.role === 'user' ? 'text-white rounded-tr-sm' : 'text-white/85 rounded-tl-sm border border-white/10'
                 }`} style={msg.role === 'user'
                   ? { background: `linear-gradient(135deg,${accentColor},${accentColor2})` }
                   : { background: 'rgba(255,255,255,0.05)' }}>
@@ -184,7 +184,7 @@ export default function AIChatModal({
                 style={{ background:`linear-gradient(135deg,${accentColor},${accentColor2})` }}>
                 <AvatarIcon size={13} className="text-white" />
               </div>
-              <div className="rounded-2xl rounded-tl-sm px-4 py-3 border border-white/8"
+              <div className="rounded-2xl rounded-tl-sm px-4 py-3 border border-white/10"
                 style={{ background:'rgba(255,255,255,0.05)' }}>
                 <TypingDots />
               </div>
@@ -199,7 +199,7 @@ export default function AIChatModal({
           <div className="px-4 pb-2 flex flex-wrap gap-1.5">
             {suggestions.map(s => (
               <button key={s} onClick={() => send(s)}
-                className="px-3 py-1 rounded-full text-xs border border-white/12 text-white/55 hover:text-white hover:border-white/25 hover:bg-white/5 transition-all">
+                className="px-3 py-1 rounded-full text-xs border border-white/10 text-white/55 hover:text-white hover:border-white/25 hover:bg-white/5 transition-all">
                 {s}
               </button>
             ))}
@@ -211,7 +211,7 @@ export default function AIChatModal({
 
         {/* Input */}
         {!exhausted && (
-          <div className="px-4 py-3 border-t border-white/8 shrink-0"
+          <div className="px-4 py-3 border-t border-white/10 shrink-0"
             style={{ background:'rgba(255,255,255,0.02)' }}>
             <div className="flex gap-2 items-end">
               <textarea ref={textRef} rows={1} value={input}
