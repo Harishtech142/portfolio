@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: replace placeholder.smartflow.dev with your real domain once you have one
+Sitemap: https://placeholder.smartflow.dev/sitemap.xml
